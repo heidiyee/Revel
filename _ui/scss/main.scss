@@ -8,8 +8,11 @@
 
 //base
 @import "base/reset";
+@import "base/fonts";
 @import "base/global";
+@import "base/typography";
 
 //components
 @import "components/nav";
 @import "components/hero";
+@import "components/summary";

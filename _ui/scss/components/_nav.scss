@@ -3,7 +3,7 @@ nav {
     position: fixed;
     width: 100%;
     height: 60px;
-    padding-top: 18px;
+    padding: 18px 20px 0;
 
     z-index: 6;
 
@@ -17,9 +17,7 @@ nav {
         }
 
         #nav-icon {
-            display: inline-block;
             position: absolute;
-            left: 2em;
             width: 1.8em;
             height: 28px;
             cursor: pointer;
@@ -84,37 +82,54 @@ nav {
             position: fixed;
             background-color: $blue;
             width: 100%;
-            height: 100vh;
-            bottom: 100%;
-            overflow: hidden;
+            left: 0;
+            top: -100%;
+            overflow-y: scroll;
+
             z-index: 3;
-            transition: bottom .25s ease-in-out;
+            transition: top .5s ease-in-out, padding 0.5s ease-in-out;
 
             ul {
-                padding: 10em 0 2em;
+                padding: 2em 0;
 
                 li {
-                    font-size: 1.8em;
-                    text-align: center;
                     position: relative;
+                    font-size: 1.8em;
+                    padding: 0.5em 20px;
+                    text-align: left;
 
-                    a {
-                        display: block;
-                        font-size: 1em;
-                        padding: 1em 0;
-                        border: none;
+                    .first-level {
+                        cursor: pointer;
+                    }
+                }
+
+                &.second-level {
+                    max-height: 0;
+                    overflow: hidden;
+                    padding: 0;
+
+                    transition: max-height 0.5s ease, padding 0.4s linear;
+
+                    li {
+                        font-size: 1.0em;
+                    }
+
+                    &.open {
+                        max-height: 400px;
+                        padding-top: 0.5em;
+
+                        transition: max-height 1s ease, padding 0.5s linear;
                     }
                 }
             }
         }
 
         #nav-links.popup {
-            // width: 100%;
-            // position: fixed;
-            bottom: 0;
+            top: 0;
+            padding: 6em 0 2em;
             z-index: 3;
 
-            transition: bottom .25s ease-in-out;
+            transition: top .5s ease-in-out, padding 0.5s ease-in-out;
         }
     }
 }

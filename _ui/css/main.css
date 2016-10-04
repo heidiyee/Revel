@@ -59,18 +59,43 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("../fonts/MyriadPro-Regular.otf") format("truetype"); }
+
+section {
+  padding: 0 20px; }
+
 .offscreen {
   display: block;
   position: absolute;
   left: -999999px;
   top: -999999px; }
 
+body {
+  font-family: 'Myriad Pro', sans-serif;
+  color: #fff; }
+
+p {
+  font-size: 1.6em;
+  line-height: 130%; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+.font-orange {
+  color: #FF4100; }
+
+.font-thirty {
+  font-size: 3.0em; }
+
 nav {
   background-color: #fff;
   position: fixed;
   width: 100%;
   height: 60px;
-  padding-top: 18px;
+  padding: 18px 20px 0;
   z-index: 6; }
   nav .container {
     text-align: center; }
@@ -79,9 +104,7 @@ nav {
       width: 96px;
       z-index: 6; }
     nav .container #nav-icon {
-      display: inline-block;
       position: absolute;
-      left: 2em;
       width: 1.8em;
       height: 28px;
       cursor: pointer;
@@ -132,28 +155,40 @@ nav {
       position: fixed;
       background-color: #041E41;
       width: 100%;
-      height: 100vh;
-      bottom: 100%;
-      overflow: hidden;
+      left: 0;
+      top: -100%;
+      overflow-y: scroll;
       z-index: 3;
-      -webkit-transition: bottom .25s ease-in-out;
-      transition: bottom .25s ease-in-out; }
+      -webkit-transition: top .5s ease-in-out, padding 0.5s ease-in-out;
+      transition: top .5s ease-in-out, padding 0.5s ease-in-out; }
       nav .container #nav-links ul {
-        padding: 10em 0 2em; }
+        padding: 2em 0; }
         nav .container #nav-links ul li {
+          position: relative;
           font-size: 1.8em;
-          text-align: center;
-          position: relative; }
-          nav .container #nav-links ul li a {
-            display: block;
-            font-size: 1em;
-            padding: 1em 0;
-            border: none; }
+          padding: 0.5em 20px;
+          text-align: left; }
+          nav .container #nav-links ul li .first-level {
+            cursor: pointer; }
+        nav .container #nav-links ul.second-level {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0;
+          -webkit-transition: max-height 0.5s ease, padding 0.4s linear;
+          transition: max-height 0.5s ease, padding 0.4s linear; }
+          nav .container #nav-links ul.second-level li {
+            font-size: 1.0em; }
+          nav .container #nav-links ul.second-level.open {
+            max-height: 400px;
+            padding-top: 0.5em;
+            -webkit-transition: max-height 1s ease, padding 0.5s linear;
+            transition: max-height 1s ease, padding 0.5s linear; }
     nav .container #nav-links.popup {
-      bottom: 0;
+      top: 0;
+      padding: 6em 0 2em;
       z-index: 3;
-      -webkit-transition: bottom .25s ease-in-out;
-      transition: bottom .25s ease-in-out; }
+      -webkit-transition: top .5s ease-in-out, padding 0.5s ease-in-out;
+      transition: top .5s ease-in-out, padding 0.5s ease-in-out; }
 
 .hero {
   background-color: #041E41;
@@ -162,12 +197,14 @@ nav {
   background-size: cover;
   background-position: center; }
   .hero .container {
+    width: 100%;
     height: 100%;
     text-align: center; }
     .hero .container p {
       position: relative;
       color: #fff;
       font-size: 6.0em;
+      line-height: 110%;
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -175,4 +212,25 @@ nav {
     .hero .container img {
       position: absolute;
       width: 12px;
-      bottom: 2em; }
+      bottom: 2em;
+      margin: 0 auto;
+      left: 0;
+      right: 0; }
+
+.summary {
+  background-color: #041E41;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  .summary .container p {
+    padding-bottom: 2em; }
+    .summary .container p.padding-bottom {
+      padding-bottom: 0.75em; }
+  .summary .container img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
+    margin-bottom: 2em; }
+    .summary .container img:last-child {
+      margin-right: 0; }

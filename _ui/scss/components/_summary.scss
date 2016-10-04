@@ -1,0 +1,21 @@
+.summary {
+    background-color: $blue;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .container {
+        p {
+            padding-bottom: 2em;
+
+            &.padding-bottom {
+                padding-bottom: 0.75em;
+            }
+        }
+
+        img {
+            @include span-columns(10);
+            @include shift(1);
+            margin-bottom: 2em;
+        }
+    }
+}

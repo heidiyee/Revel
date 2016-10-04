@@ -2,15 +2,16 @@ var nav = function() {
 	$("#nav-icon").click(function() {
         $(this).toggleClass("open");
         $("#nav-links").toggleClass("popup");
-
-		// if ($(this).hasClass("open")) {
-		// 	$('.nav-bar').addClass('black');
-		// 	$('.logo-image').attr('src','assets/fulcrumlogo-inverted.svg');
-		// } else {
-		// 	$('.nav-bar').removeClass('black');
-		// 	$('.logo-image').attr('src','assets/fulcrumlogo.svg');
-		// }
 	});
 };
 
+var dropMenu = function() {
+    $('a[href*="#"]:not([href="#"])').on('click', function (event){
+        var target = $(this).attr('href');
+        console.log(target);
+    $(target).toggleClass('open');
+    });
+};
+
 $(document).ready(nav);
+$(document).ready(dropMenu);
