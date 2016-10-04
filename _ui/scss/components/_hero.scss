@@ -1,13 +1,28 @@
 .hero {
     background-color: $blue;
+    background-image: url(../assets/background-hero.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
     .container {
+        height: 100%;
         text-align: center;
 
         p {
+            position: relative;
             color: $white;
             font-size: 6.0em;
+
+            top: 50%;
+            transform: translateY(-50%);
+
         }
 
+        img {
+            position: absolute;
+            width: 12px;
+            bottom: 2em;
+        }
     }
 }

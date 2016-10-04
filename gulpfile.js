@@ -27,21 +27,20 @@ return gulp.src('_ui/scss/**/*.scss')
         includePaths: neat
     }))
     .pipe(autoprefixer({
-        browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'],
+        browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 9', 'ios 8', 'android 4'],
         cascade: false
     }))
     .pipe(gulp.dest('_ui/css/'))
     .pipe(browserSync.reload({
         stream:true
     }))
-
 });
 
 //watches html, css, and js files to reload
 gulp.task('watch', ['browserSync', 'sass'], function() {
     gulp.watch('_ui/scss/**/*.scss', ['sass']);
     gulp.watch('*.html', browserSync.reload);
-    gulp.watch('_ui/js/**/*.js', browserSync.reload);
+    gulp.watch('_ui/js/*.js', browserSync.reload);
 });
 
 //reloads browser
@@ -60,14 +59,14 @@ gulp.task('useref', function() {
         .pipe(useref())
         .pipe(gulpIf('_ui/js/*.js', uglify()))
         .pipe(gulpIf('_ui/css/*.css', cleanCSS()))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/_ui'))
 });
 
 //move fonts to dist folder
 gulp.task('fonts', function() {
     return gulp.src('_ui/fonts/**/*')
         .pipe(plumber({errorHandler: onError}))
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('dist/_ui/fonts'))
 
 });
 
