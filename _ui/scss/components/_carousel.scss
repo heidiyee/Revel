@@ -10,14 +10,12 @@
         background-color: rgba(255, 255, 255, 0.95);
         color: $orange;
         padding: 3em;
-
-        h2 {
-            margin-bottom: 2em;
-        }
+        max-width: 675px;
 
         h3 {
             color: $blue;
             font-size: 2.0em;
+            margin-bottom: 1.4em;
         }
 
         hr {
@@ -28,13 +26,14 @@
         p {
             font-size: 1.6em;
             color: $blue;
+            margin-bottom: .5em;
 
             &.icon-right-chevron::before {
                 color: $orange;
             }
         }
 
-        #owl-status {
+        > #owl-status {
             display: block;
             position: absolute;
             text-align: center;
@@ -42,8 +41,8 @@
             height: 25px;
             left: 0;
             bottom: 30px;
-            // z-index: 4;
             font-size: 1.4em;
+            margin-bottom: 0;
         }
 
         .buttons {

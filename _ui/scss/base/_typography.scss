@@ -5,7 +5,7 @@ body {
 
 p {
     font-size: 1.6em;
-    line-height: 130%;
+    line-height: 140%;
 }
 
 a {
@@ -28,6 +28,9 @@ h2 {
     border-left: 1px solid $orange;
     border-top: 1px solid $orange;
     padding: 0.5em 0 0 0.5em;
+    color: $orange;
+    margin-bottom: 2em;
+
 }
 
 hr {
