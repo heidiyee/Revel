@@ -81,55 +81,66 @@ nav {
         #nav-links {
             position: fixed;
             background-color: $blue;
+            height: 100vh;
             width: 100%;
             left: 0;
             top: -100%;
-            overflow-y: scroll;
+            overflow: hidden;
 
             z-index: 3;
             transition: top .5s ease-in-out, padding 0.5s ease-in-out;
 
-            ul {
-                padding: 2em 0;
+            > .container {
+                height: 100%;
+                overflow-y: scroll;
 
-                li {
-                    position: relative;
-                    font-size: 1.8em;
-                    padding: 0.5em 20px;
-                    text-align: left;
-
-                    .first-level {
-                        cursor: pointer;
-                    }
+                hr {
+                    border-top: 1px solid $ocean;
                 }
 
-                &.second-level {
-                    max-height: 0;
-                    overflow: hidden;
-                    padding: 0;
-
-                    transition: max-height 0.5s ease, padding 0.4s linear;
+                ul {
+                    padding: 1em 0;
 
                     li {
-                        font-size: 1.0em;
+                        position: relative;
+                        font-size: 1.8em;
+                        padding: 0.5em 20px;
+                        text-align: left;
+
+                        .first-level {
+                            cursor: pointer;
+                        }
                     }
 
-                    &.open {
-                        max-height: 400px;
-                        padding-top: 0.5em;
+                    &.second-level {
+                        max-height: 0;
+                        overflow: hidden;
+                        padding: 0;
 
-                        transition: max-height 1s ease, padding 0.5s linear;
+                        transition: max-height 0.5s ease, padding 0.4s linear;
+
+                        > li {
+                            font-size: 1.0em;
+                        }
+
+                        &.open {
+                            max-height: 400px;
+                            padding-top: 0.5em;
+
+                            transition: max-height 1s ease, padding 0.5s linear;
+                        }
                     }
                 }
             }
-        }
 
-        #nav-links.popup {
-            top: 0;
-            padding: 6em 0 2em;
-            z-index: 3;
+            &.popup {
+                top: 0;
+                padding: 6em 0 2em;
+                z-index: 3;
 
-            transition: top .5s ease-in-out, padding 0.5s ease-in-out;
+                transition: top .5s ease-in-out, padding 0.5s ease-in-out;
+
+            }
         }
     }
 }

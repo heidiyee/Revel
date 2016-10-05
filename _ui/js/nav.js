@@ -8,8 +8,8 @@ var nav = function() {
 var dropMenu = function() {
     $('a[href*="#"]:not([href="#"])').on('click', function (event){
         var target = $(this).attr('href');
-        console.log(target);
-    $(target).toggleClass('open');
+        $(target).toggleClass('open');
+        event.preventDefault();
     });
 };
 

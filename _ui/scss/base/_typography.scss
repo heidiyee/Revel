@@ -13,6 +13,27 @@ a {
     color: $white;
 }
 
+a.button {
+    display: block;
+    padding: 1.6em 2em;
+    color: $orange;
+    text-align: center;
+    border: 1px solid $orange;
+    width: 170px;
+    margin: 2em auto;
+}
+
+h2 {
+    font-size: 1.1em;
+    border-left: 1px solid $orange;
+    border-top: 1px solid $orange;
+    padding: 0.5em 0 0 0.5em;
+}
+
+hr {
+    border: 0;
+}
+
 .font-orange {
     color: $orange;
 }
