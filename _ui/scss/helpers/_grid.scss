@@ -13,11 +13,13 @@ $max-width: 1200px;
     .container {
         position: relative;
 
-        .left, .right {
-            @include span-columns(5);
+        .left {
+            @include span-columns(6);
+            @include omega;
         }
 
         .right {
+            @include span-columns(5);
             @include shift(1);
         }
     }

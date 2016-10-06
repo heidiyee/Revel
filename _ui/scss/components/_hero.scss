@@ -5,6 +5,8 @@
     background-size: cover;
     background-position: center;
 
+    padding-top: 2em;
+
     .container {
         width: 100%;
         height: 100%;
@@ -24,10 +26,18 @@
         img {
             position: absolute;
             width: 12px;
-            bottom: 2em;
+            bottom: 4em;
             margin: 0 auto;
             left: 0;
             right: 0;
+
+            animation: arrow-down 1s 4;
+            animation-direction: alternate;
+            transition: bottom 0.25s ease-in-out;
+
+            &:hover, &:focus {
+                bottom: 2em;
+            }
         }
     }
 }

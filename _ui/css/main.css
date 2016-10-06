@@ -26,15 +26,34 @@ html {
 @media only screen and (min-width: 750px) {
   .container {
     position: relative; }
-    .container .left, .container .right {
+    .container .left {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 40.29137%; }
-      .container .left:last-child, .container .right:last-child {
+      width: 48.82117%;
+      margin-right: 0; }
+      .container .left:last-child {
         margin-right: 0; }
     .container .right {
-      margin-left: 8.5298%; } }
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      margin-left: 8.5298%; }
+      .container .right:last-child {
+        margin-right: 0; } }
+
+@-webkit-keyframes arrow-down {
+  from {
+    bottom: 4em; }
+  to {
+    bottom: 2em; } }
+
+@keyframes arrow-down {
+  from {
+    bottom: 4em; }
+  to {
+    bottom: 2em; } }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -306,7 +325,8 @@ nav {
   background-image: url(../assets/background-hero.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  padding-top: 2em; }
   .hero .container {
     width: 100%;
     height: 100%;
@@ -323,10 +343,18 @@ nav {
     .hero .container img {
       position: absolute;
       width: 12px;
-      bottom: 2em;
+      bottom: 4em;
       margin: 0 auto;
       left: 0;
-      right: 0; }
+      right: 0;
+      -webkit-animation: arrow-down 1s 4;
+      animation: arrow-down 1s 4;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+      -webkit-transition: bottom 0.25s ease-in-out;
+      transition: bottom 0.25s ease-in-out; }
+      .hero .container img:hover, .hero .container img:focus {
+        bottom: 2em; }
 
 .summary {
   background-color: #041E41; }
@@ -350,6 +378,7 @@ nav {
     float: none;
     vertical-align: middle; }
   .summary .container img {
+    margin: 0;
     width: 100%; } }
 
 .carousel {
@@ -523,7 +552,9 @@ nav {
     margin-left: 0;
     max-width: 170px; }
     .insights .container .buttons a.button:last-child {
-      margin-right: 0; } }
+      margin-right: 0; }
+  .insights .container .right img {
+    width: 100%; } }
 
 @media only screen and (min-width: 970px) {
   .insights .container .buttons a.button {
