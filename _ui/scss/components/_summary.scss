@@ -1,7 +1,5 @@
 .summary {
     background-color: $blue;
-    padding-top: 24px;
-    padding-bottom: 24px;
 
     .container {
         p {
@@ -16,6 +14,22 @@
             @include span-columns(10);
             @include shift(1);
             margin-bottom: 2em;
+        }
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .summary {
+        .container {
+            .left, .right {
+                display: inline-block;
+                float: none;
+                vertical-align: middle;
+            }
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

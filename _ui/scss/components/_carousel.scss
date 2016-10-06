@@ -1,9 +1,10 @@
 .carousel {
     background-image: url(../assets/background-spotlight.jpg);
-    background-position: left -2.4em center;
+    background-position: left center;
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3em 20px;
+    background-size: 100% 100%;
+
+    transition: background-position 0.25s linear, background-size 0.25s linear;
 
     .container {
         position: relative;
@@ -106,5 +107,96 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .carousel {
+        .container {
+            max-width: 650px;
+
+            h2 {
+                max-width: 450px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .slides {
+                max-width: 450px;
+                margin: 0 auto;
+
+                .buttons {
+
+                    a.button {
+                        display: inline-block;
+                        margin-left: 0;
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 675px) {
+    .carousel {
+        background-position: right center;
+        background-size: 130% auto;
+
+        transition: background-position 0.25s ease, background-size 0.25s ease;
+
+        .container {
+            margin-right: 0;
+            padding-top: 6em;
+            padding-bottom: 6em;
+
+            > #owl-status {
+            }
+
+            .owl-carousel {
+                .owl-nav {
+                    position: absolute;
+                    top: 50%;
+                    margin: 0;
+                    width: 100%;
+                    transform: translateY(-50%);
+
+                    .owl-prev {
+
+                    }
+
+                    .owl-next {
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .carousel {
+        background-position: right center;
+        background-size: 120% auto;
+
+        transition: background-position 0.25s linear, background-size 0.25s linear;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .carousel {
+        background-position: right center;
+        background-size: 110% auto;
+
+        transition: background-position 0.25s linear, background-size 0.25s linear;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .carousel {
+        background-position: center;
+        background-size: 100%;
+
+        transition: background-position 0.25s linear, background-size 0.25s linear;
     }
 }

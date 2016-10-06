@@ -1,5 +1,5 @@
 section {
-    padding: 0 20px;
+    padding: 3em 20px;
 }
 
 //--------Classes----------
@@ -8,4 +8,24 @@ section {
     position: absolute;
     left: -999999px;
     top: -999999px;
+}
+
+@media only screen and (min-width: 550px) {
+    section {
+        padding: 6em 30px;
+
+        &.hero {
+            padding-bottom: 0;
+        }
+    }
+
+    nav {
+        padding-left: 30px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    section {
+        padding: 8em 30px;
+    }
 }

@@ -5,11 +5,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url(../fonts/icomoon.eot?z5yt3d);
-  src:  url(../fonts/icomoon.eot?z5yt3d#iefix) format('embedded-opentype'),
-    url(../fonts/icomoon.ttf?z5yt3d) format('truetype'),
-    url(../fonts/icomoon.woff?z5yt3d) format('woff'),
-    url(../fonts/icomoon.svg?z5yt3d#icomoon) format('svg');
+  src:  url(../fonts/icomoon.eot?uiz876);
+  src:  url(../fonts/icomoon.eot?uiz876#iefix) format('embedded-opentype'),
+    url(../fonts/icomoon.ttf?uiz876) format('truetype'),
+    url(../fonts/icomoon.woff?uiz876) format('woff'),
+    url(../fonts/icomoon.svg?uiz876#icomoon) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,6 +29,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-linkedin:before {
+  content: "\e906";
+}
+.icon-microsoft:before {
+  content: "\e907";
+}
+.icon-twitter:before {
+  content: "\e908";
+}
+.icon-youtube:before {
+  content: "\e909";
+}
 .icon-right-chevron:before {
   content: "\e900";
   font-size: 0.7em;

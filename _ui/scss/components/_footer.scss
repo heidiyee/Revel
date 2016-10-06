@@ -1,0 +1,15 @@
+footer {
+    background-color: $blue;
+    height: 60px;
+    text-align: center;
+    padding-top: 2em;
+
+    p {
+        display: none;
+    }
+
+    span {
+        font-size: 2.4em;
+        margin-right: 0.4em;
+    }
+}

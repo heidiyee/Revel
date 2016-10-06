@@ -4,3 +4,22 @@ $max-width: 1200px;
 .container {
     @include outer-container;
 }
+
+.left, .right {
+    @include span-columns(12);
+}
+
+@media only screen and (min-width: 750px) {
+    .container {
+        position: relative;
+
+        .left, .right {
+            @include span-columns(5);
+        }
+
+        .right {
+            @include shift(1);
+        }
+    }
+
+}
