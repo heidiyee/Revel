@@ -1,4 +1,4 @@
-.insights {
+.white-and-blue {
     color: $blue;
     height: auto;
 
@@ -24,7 +24,7 @@
 }
 
 @media only screen and (min-width: 500px) {
-    .insights {
+    .white-and-blue {
         .container {
             position: relative;
 
@@ -43,7 +43,7 @@
 }
 
 @media only screen and (min-width: 750px) {
-    .insights {
+    .white-and-blue {
         .container {
 
             .left, .right {
@@ -70,7 +70,7 @@
 }
 
 @media only screen and (min-width: 970px) {
-    .insights {
+    .white-and-blue {
         .container {
             .buttons {
                 a.button {

@@ -1,5 +1,5 @@
 var height;
-var hero = $('.hero');
+var hero = $('.hero.home');
 
 var heroHeight = function() {
     height = $(window).height();

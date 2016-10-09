@@ -1,4 +1,4 @@
-.summary {
+.blue-and-white {
     background-color: $blue;
 
     .container {
@@ -8,6 +8,10 @@
             &.padding-bottom {
                 padding-bottom: 0.75em;
             }
+
+            &.no-padding-bottom {
+                padding-bottom: 0;
+            }
         }
 
         img {
@@ -15,11 +19,27 @@
             @include shift(1);
             margin-bottom: 2em;
         }
+
+        .headers {
+
+            &::before {
+                color: $orange;
+                font-size: 5.0em;
+                float: left;
+                width: 70px;
+                text-align: center;
+                margin-right: 25px;
+            }
+
+            p {
+                font-family: 'Myriad Pro', sans-serif;
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 750px) {
-    .summary {
+    .blue-and-white {
         .container {
             .left, .right {
                 display: inline-block;

@@ -5,11 +5,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url(../fonts/icomoon.eot?uiz876);
-  src:  url(../fonts/icomoon.eot?uiz876#iefix) format('embedded-opentype'),
-    url(../fonts/icomoon.ttf?uiz876) format('truetype'),
-    url(../fonts/icomoon.woff?uiz876) format('woff'),
-    url(../fonts/icomoon.svg?uiz876#icomoon) format('svg');
+  src:  url(../fonts/icomoon.eot?x15qb8);
+  src:  url(../fonts/icomoon.eot?x15qb8#iefix) format('embedded-opentype'),
+    url(../fonts/icomoon.ttf?x15qb8) format('truetype'),
+    url(../fonts/icomoon.woff?x15qb8) format('woff'),
+    url(../fonts/icomoon.svg?x15qb8#icomoon) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,6 +29,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-magnified:before {
+  content: "\e90a";
+}
+.icon-transformation:before {
+  content: "\e90b";
+}
+.icon-org:before {
+  content: "\e90c";
+}
+.icon-pointer:before {
+  content: "\e90d";
+}
+.icon-lightbulb:before {
+  content: "\e90e";
+}
 .icon-linkedin:before {
   content: "\e906";
 }
@@ -43,7 +58,7 @@
 }
 .icon-right-chevron:before {
   content: "\e900";
-  font-size: 0.7em;
+  font-size: .7em;
 }
 .icon-down-arrow:before {
   content: "\e901";
