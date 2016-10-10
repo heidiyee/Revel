@@ -56,6 +56,16 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    .inline-carousel .owl-nav .owl-prev,
+    .inline-carousel .owl-nav .owl-next,
+    .inline-carousel .owl-dot {
+      cursor: pointer;
+      cursor: hand;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
 
   .owl-carousel.owl-loaded {
     display: block; }

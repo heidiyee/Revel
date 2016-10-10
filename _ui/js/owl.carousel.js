@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     $('.inline-carousel').owlCarousel({
         loop: false,
-        nav: true,
+        nav: false,
         navText: ["",""],
         margin: 30,
         items: 1,

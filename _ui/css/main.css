@@ -720,11 +720,21 @@ nav {
         margin: 0 auto; }
 
 @media only screen and (min-width: 750px) {
-  .gray-and-blue .container #owl-status {
-    display: inline-block;
-    color: #041E41; }
-  .gray-and-blue .container .owl-item {
-    display: inline-block; } }
+  .gray-and-blue .container {
+    position: relative; }
+    .gray-and-blue .container #owl-status {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 5px;
+      text-align: center;
+      color: #041E41;
+      z-index: 0; }
+    .gray-and-blue .container .inline-carousel .owl-item {
+      display: inline-block; }
+    .gray-and-blue .container .inline-carousel .owl-nav {
+      position: relative;
+      z-index: 1; } }
 
 footer {
   background-color: #041E41;
