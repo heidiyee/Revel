@@ -1,0 +1,62 @@
+.gray-and-blue {
+    background-color: $gray;
+    .container {
+        overflow: hidden;
+
+        #owl-status {
+            display: none;
+        }
+
+        .slides {
+            background-color: $white;
+            max-width: 435px;
+            color: $blue;
+            text-align: center;
+            padding: 0 0 10px;
+            margin: 0 auto 60px;
+
+            > .background {
+                background-image: url(../assets/future.jpg);
+                background-position: center top;
+                background-size: auto 215px;
+                padding: 10px 0;
+
+                p {
+                    font-size: 3.0em;
+                    width: 95%;
+                    padding-top: 0;
+                    margin: 0 auto 1em;
+                }
+
+                &.agile {
+                    background-image: url(../assets/agile.jpg);
+                }
+            }
+
+
+            h2 {
+                border: none;
+            }
+
+            p {
+                width: 80%;
+                padding: 30px 20px 0;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .gray-and-blue {
+        .container {
+            #owl-status {
+                display: inline-block;
+                color: $blue;
+            }
+            .owl-item {
+                display: inline-block;
+            }
+        }
+    }
+}

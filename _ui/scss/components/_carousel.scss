@@ -49,66 +49,66 @@
         .buttons {
             padding: 0.1em 0;
         }
+    }
+}
 
-        .owl-carousel {
-            .owl-nav {
-                margin: 20px auto 0;
-                text-align: center;
-                width: 140px;
-                height: 25px;
+//pulled this out so all carousel sections can use it
+.owl-nav {
+    margin: 20px auto 0;
+    text-align: center;
+    width: 140px;
+    height: 25px;
 
-                .owl-prev, .owl-next {
-                    display: inline-block;
-                    // position: relative;
-                    color: $blue;
-                    font-size: 1.8em;
-                    height: 100%;
+    .owl-prev, .owl-next {
+        display: inline-block;
+        // position: relative;
+        color: $blue;
+        font-size: 1.8em;
+        height: 100%;
 
-                    &.disabled {
-                        cursor: default;
-                    }
-                }
+        &.disabled {
+            cursor: default;
+        }
+    }
 
-                .owl-prev {
-                    float: left;
-                    &::before {
-                        content: "\e903";
-                        font-family: 'icomoon' !important;
-                        speak: none;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-variant: normal;
-                        text-transform: none;
-                        line-height: 1;
+    .owl-prev {
+        float: left;
+        &::before {
+            content: "\e903";
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
 
-                        /* Better Font Rendering =========== */
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
 
-                    }
-                }
+        }
+    }
 
-                .owl-next {
-                    float: right;
-                    &::before {
-                        content: "\e904";
-                        font-family: 'icomoon' !important;
-                        speak: none;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-variant: normal;
-                        text-transform: none;
-                        line-height: 1;
+    .owl-next {
+        float: right;
+        &::before {
+            content: "\e904";
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
 
-                        /* Better Font Rendering =========== */
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                    }
-                }
-            }
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
     }
 }
+
 
 @media only screen and (min-width: 500px) {
     .carousel {
@@ -141,7 +141,7 @@
 @media only screen and (min-width: 675px) {
     .carousel {
         background-position: right center;
-        background-size: 130% auto;
+        background-size: 135% auto;
 
         transition: background-position 0.25s ease, background-size 0.25s ease;
 

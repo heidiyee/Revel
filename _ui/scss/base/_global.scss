@@ -2,9 +2,6 @@ section {
     padding: 3em 20px;
 }
 
-nav {
-    padding: 18px 20px;
-}
 
 //--------Classes----------
 .offscreen {
@@ -14,6 +11,50 @@ nav {
     top: -999999px;
 }
 
+//drop down menu needed in multiple sections
+//first-level drop down menu
+.first-level {
+    position: relative;
+
+    a {
+        display: block;
+    }
+
+    &::after {
+        content: "\e905";
+        font-family: 'icomoon' !important;
+        font-size: 8px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(0deg);
+        z-index: 0;
+
+        transition: transform 0.35s ease;
+    }
+
+    &.open {
+        &::after {
+            transform: rotate(180deg);
+
+            transition: transform 0.25s ease;
+        }
+    }
+}
+
+
+//second-level drop down menu
 ul.second-level {
     max-height: 0;
     overflow: hidden;
@@ -22,7 +63,7 @@ ul.second-level {
     transition: max-height 0.5s ease, padding 0.4s linear;
 
     &.open {
-        max-height: 400px;
+        max-height: 500px;
 
         transition: max-height 1s ease, padding 0.5s linear;
     }
@@ -34,19 +75,6 @@ ul.second-level {
 
         &.hero {
             padding-bottom: 0;
-        }
-    }
-
-    nav {
-        padding-left: 30px;
-
-        .container {
-            #nav-links {
-                > .container {
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-            }
         }
     }
 }

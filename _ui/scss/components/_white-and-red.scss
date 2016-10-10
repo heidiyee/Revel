@@ -15,17 +15,24 @@
 
         ul {
 
-            &.first-level {
-                padding-top: 20px;
-                border-top: 1px solid $lilac;
+            li {
+                &.first-level {
+                    border-top: 1px solid $lilac;
 
-                &:last-child {
-                    border-bottom: 1px solid $lilac;
+                    a {
+                        position: relative;
+                        padding: 20px 0;
+                        z-index: 1;
+
+                    }
+
+                    &:last-child {
+                        border-bottom: 1px solid $lilac;
+                    }
                 }
             }
 
             &.second-level{
-                margin-top: 20px;
 
                 li {
                     margin-bottom: 2em;

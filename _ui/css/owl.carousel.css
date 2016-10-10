@@ -42,6 +42,10 @@
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }
+
+.inline-carousel .owl-nav.disabled,
+.inline-carousel .owl-dots.disabled {
+  display: none; }
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
@@ -52,6 +56,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+
   .owl-carousel.owl-loaded {
     display: block; }
   .owl-carousel.owl-loading {

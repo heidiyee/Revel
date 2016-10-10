@@ -4,7 +4,7 @@ nav {
     width: 100%;
     height: 60px;
     top: 0;
-
+    padding: 18px 20px;
 
     z-index: 6;
 
@@ -91,8 +91,9 @@ nav {
             z-index: 3;
             transition: top .5s ease-in-out, padding 0.5s ease-in-out;
 
-            > .container {
+            .container {
                 height: 100%;
+                padding: 0 20px;
                 overflow-y: scroll;
 
                 hr {
@@ -105,7 +106,8 @@ nav {
                     li {
                         position: relative;
                         font-size: 1.8em;
-                        padding: 0.5em 20px;
+                        padding-top: 0.5em;
+                        padding-bottom: 0.5em;
                         text-align: left;
 
                         a {
@@ -114,20 +116,23 @@ nav {
 
                         .first-level {
                             cursor: pointer;
-                        }
 
-                        ul.second-level {
-                            padding: 0;
-
-                            li {
-                                font-size: 1.0em;
-                            }
-
-                            &.open {
-                                padding-top: 0.5em;
+                            &::after {
+                                z-index: -1;
                             }
                         }
                     }
+
+                    &.second-level {
+                        padding: 0;
+
+                        li {
+                            padding-left: 1em;
+                            // font-size: 1.0em;
+                        }
+
+                    }
+
                 }
             }
 
@@ -138,6 +143,21 @@ nav {
 
                 transition: top .5s ease-in-out, padding 0.5s ease-in-out;
 
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    nav {
+        padding-left: 30px;
+
+        .container {
+            #nav-links {
+                > .container {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
             }
         }
     }
